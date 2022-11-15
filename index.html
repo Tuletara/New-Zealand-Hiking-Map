@@ -3,17 +3,40 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
-  <title>Week 10 Assignment - GIS 5547</title>
+  <title>New Zealand Hiking Map</title>
   <link rel="stylesheet" href="https://js.arcgis.com/4.24/esri/themes/light/main.css" />
   <script src="https://js.arcgis.com/4.24/"></script>
 </head>
 
 <body>
+  <!--A container for the button-->
   <div id="viewDiv"></div>
-  <!--A container the button-->
-  <div id="buttonContainer">
-    <button id="clickButton">Click</button>
+  <div class="buttonContainer">
+    <button type="submit" class="clickButton" onclick="openPopup()">INFO</button>
+    <div class="popup" id="popup">
+      <h2>Lodging information is sourced from the New Zealand Department of Conservation</h2>
+      <p>More information can be found at https://www.doc.govt.nz/parks-and-recreation/places-to-stay</p>
+      <button type="button" onclick="closePopup()">Close Info Page</button>
+    </div>
   </div>
+  <script>
+    let popup = document.getElementById("popup");
+
+    function openPopup() {
+      popup.classList.add("open-popup");
+    }
+
+    function closePopup() {
+      popup.classList.remove("open-popup");
+    }
+  </script>
+
+</body>
+
+</html>
+<!-- partial -->
+<script src="./script.js"></script>
+
 </body>
 
 </html>
