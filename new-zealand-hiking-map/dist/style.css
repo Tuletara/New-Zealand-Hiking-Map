@@ -51,7 +51,7 @@ body,
 /* Show where the popup box displays on page */
 .open-popup {
   visibility: visible;
-  top: 308%; /* 0 moves center of box to top of page */
+  top: 220%; /* 0 moves center of box to top of page */
   left: -1%;
   transform: translate(-50%, -50%) scale(1);
 }
